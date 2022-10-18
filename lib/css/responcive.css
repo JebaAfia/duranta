@@ -1,0 +1,313 @@
+/*
+    .::WOODBOARD RESPONCIVE CSS::.
+
+Developer Name: ABTanjir;
+Email         : abtanjir@gmail.com;
+Mobile        : +8801911222919;
+Facebook      : www.fb.com/abtanjir;
+*/
+
+@media only screen and (min-width: 1030px) and (max-width: 1310px) {
+    .heading_text {
+        font-size: 20px !important;
+    }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1029px) {
+    .heading {
+        max-width: 100%;
+    }
+    .heading_text {
+        font-size: 16px !important;
+    }
+    .heading_link {
+        height: 160px;
+        width: 160px;
+        font-size: 22px;
+        margin: 0 5px 0px;
+    }
+    .category ul li span {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .row .nine.columns {
+        width: 98%;
+    }
+    .pad-50 {
+        padding: 0 40px;
+    }
+    .partners_logo {
+        margin: 0 auto;
+        text-align: center;
+        float: none;
+    }
+    .row .six.columns {
+        width: 100%;
+    }
+    .double img {
+        text-align: center;
+        float: none;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 739px) {
+    .factory-galery img {
+        width: 50%;
+        max-height: 324px;
+        padding: 0 5px 10px;
+    }
+    .heading {
+        max-width: 100%;
+    }
+    .small_gear {
+        width: 200px;
+        height: 200px;
+        padding-top: 10px;
+    }
+    .small_gear a {
+        font-size: 18px;
+    }
+    .category ul li span {
+        font-size: 18px;
+    }
+    .heading_link {
+        border: 5px dashed rgba(255, 255, 255, .7);
+        -moz-border: 5px dashed rgba(255, 255, 255, .7);
+        -webkit-border: 5px dashed rgba(255, 255, 255, .7);
+        -ms-border: 5px dashed rgba(255, 255, 255, .7);
+        -o-border: 5px dashed rgba(255, 255, 255, .7);
+        height: 100px;
+        width: 100px;
+        font-size: 15px;
+        margin: 0;
+        line-height: normal;
+    }
+    .heading_link_container {
+        height: 105px;
+        width: 105px;
+    }
+    .heading_link_container a {
+        color: #000;
+        top: -80px;
+        position: relative;
+        font-size: 22px;
+    }
+    .heading_text {
+        color: #FFF;
+        font-size: 18px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .factory-galery img {
+        width: 50%;
+        max-height: 324px;
+        padding: 0 5px 10px;
+    }
+    .pad-50 {
+        padding: 10px 10px 10px;
+    }
+}
+
+/* slicknav_menu_configuration*/
+
+.slicknav_menu {
+    display: none;
+}
+
+@media screen and (max-width: 1007px) {
+    .page_caption h2 {
+        font-size: 25px;
+    }
+    .page_caption p {
+        font-size: 12px;
+    }
+    .hide_m {
+        display: none;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .js #menu {
+        display: none;
+    }
+    .js .slicknav_menu {
+        display: block;
+    }
+    /*CATEGORY*/
+    .header {
+        min-height: 900px;
+    }
+    .row .fourteen.columns {
+        width: 90%;
+    }
+    .bike_box {
+        width: 100%;
+    }
+    .bike_desc {
+        float: none;
+        background-position: 70% 100%;
+    }
+    .bike_box img {
+        max-width: 80%;
+        display: inline-table;
+        width: 100%;
+    }
+    .bikes li {
+        margin-bottom: 60px;
+    }
+    .bikes li:nth-child(odd) {
+        padding: 0px;
+    }
+    .bikes li:nth-child(even) {
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /* -- smaller then 800 px width device -- */
+    .row .seven.columns,
+    .row .nine.columns {
+        width: 100%;
+    }
+    .tab-list table th {
+        font-size: 10px;
+        padding: 3px;
+    }
+    .partner_list {
+        padding: 0px;
+    }
+    .tab-list table td {
+        padding: 0px;
+        font-size: 8px;
+    }
+    .tab-list {
+        width: 100%;
+        margin: 30px auto;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .logo {
+        padding-left: 5px;
+        float: left;
+        display: block;
+        position: absolute;
+        z-index: 10;
+        width: 100px;
+        height: 88px;
+    }
+    .heading {
+        max-width: 100%;
+    }
+    .small_gear {
+        width: 200px;
+        height: 200px;
+        padding-top: 10px;
+    }
+    .small_gear a {
+        font-size: 18px;
+    }
+    .category ul li span {
+        font-size: 18px;
+    }
+    .heading_link {
+        border: 5px dashed rgba(255, 255, 255, .7);
+        -ms-border: 5px dashed rgba(255, 255, 255, .7);
+        -o-border: 5px dashed rgba(255, 255, 255, .7);
+        -webkit-border: 5px dashed rgba(255, 255, 255, .7);
+        -moz-border: 5px dashed rgba(255, 255, 255, .7);
+        height: 100px;
+        width: 100px;
+        margin: 0;
+        line-height: normal;
+    }
+    .heading_link_container a {
+        color: #000;
+        top: -80px;
+        position: relative;
+    }
+    .heading_link_container {
+        height: 105px;
+        font-size: 18px;
+        width: 105px;
+    }
+    .row .three.columns {
+        width: 100%;
+    }
+    .row .five.columns {
+        width: 100%;
+    }
+    .contact-info {
+        border-right: none;
+    }
+    .contact-box label {
+        width: 25%;
+        text-align: left;
+        margin: 0;
+    }
+    .contact-box input,
+    textarea {
+        width: 75%;
+    }
+    .contact-box {
+        margin: 0 10px;
+    }
+    .about_collapse {
+        margin: 5px 0 0 0px;
+        padding: 0 !important;
+    }
+    .collapse {
+        margin-top: 15px;
+    }
+    .copyright {
+        clear: both !important;
+        float: none !important;
+        display: block !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        align-self: center !important;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    .big_gear {
+        width: 100%;
+        top: 60px;
+    }
+    .gear_bg {
+        border-radius: 0px;
+        background-color: rgba(238, 31, 31, 0.8);
+        width: 100%;
+        height: 430px;
+        left: auto;
+        margin: 0 auto;
+        padding: 0px;
+        top: 10px;
+        text-align: center;
+        z-index: 22;
+    }
+    .gear_bg p {
+        padding: 0 15px;
+    }
+    .heading {
+        padding-top: 170px !important;
+    }
+    .header {
+        background-size: 100% 100% !important;
+        min-height: 310px !important;
+        background-repeat: no-repeat !important;
+    }
+    .about {
+        min-height: 700px;
+    }
+    .anim,
+    .anim.anim_small_gear {
+        margin: 0 auto;
+        border: none;
+        height: 60px;
+    }
+}

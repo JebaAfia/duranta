@@ -1,0 +1,881 @@
+/*
+  .::WOOD BOARD FRAMEWORK::.
+
+Developer Name: ABTanjir;
+Email         : abtanjir@gmail.com;
+Mobile        : +8801911222919;
+Facebook      : www.fb.com/abtanjir;
+*/
+
+.row {
+    position: relative;
+    width: 100%;
+    /*whatever you want - can even be fixed if you prefer*/
+    margin: 0 auto;
+    padding: 0;
+}
+
+.row .column,
+.row .columns {
+    float: left;
+    display: inline;
+    margin-left: 0.78125%;
+    margin-right: 0.78125%;
+}
+
+.row .one.column,
+.row .one.columns {
+    width: 4.6875%;
+}
+
+.row .two.columns {
+    width: 12.9375%;
+}
+
+.row .three.columns {
+    width: 17.1875%;
+}
+
+.row .four.columns {
+    width: 23.4375%;
+}
+
+.row .five.columns {
+    width: 29.6875%;
+}
+
+.row .six.columns {
+    width: 35.9375%;
+}
+
+.row .seven.columns {
+    width: 42.1875%;
+}
+
+.row .eight.columns {
+    width: 48.4375%;
+}
+
+.row .nine.columns {
+    width: 54.6875%;
+}
+
+.row .ten.columns {
+    width: 60.9375%;
+}
+
+.row .eleven.columns {
+    width: 67.1875%;
+}
+
+.row .twelve.columns {
+    width: 73.4375%;
+}
+
+.row .thirteen.columns {
+    width: 79.6875%;
+}
+
+.row .fourteen.columns {
+    width: 85.9375%;
+}
+
+.row .fifteen.columns {
+    width: 92.1875%;
+}
+
+.row .sixteen.columns,
+.column {
+    width: 98.4375%;
+}
+
+.row .one-third.column {
+    width: 31.7708%;
+}
+
+.row .two-thirds.column {
+    width: 65.1041%;
+}
+
+.row .half {
+    width: 50%;
+}
+
+.row .full {
+    width: 100%;
+}
+
+/* end full width container */
+
+/* Table of Contents
+----------------------
+    #Base 960 Grid
+    #Tablet (Portrait)
+    #Mobile (Portrait)
+    #Mobile (Landscape)
+    #Clearing */
+
+/* #Base 960 Grid */
+
+.content {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 1200px;
+}
+
+.container {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container .column,
+.columns,
+.container .columns {
+    float: left;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Nested Column Classes */
+
+.column.alpha,
+.columns.alpha {
+    margin-left: 0;
+}
+
+.column.omega,
+.columns.omega {
+    margin-right: 0;
+}
+
+.container.wrap {
+    width: 700px;
+}
+
+/* Base Grid */
+
+.container .one.column,
+.container .one.columns,
+.one.columns {
+    width: 70px;
+}
+
+.container .two.columns {
+    width: 140px;
+}
+
+.container .three.columns {
+    width: 205px;
+}
+
+.container .four.columns {
+    width: 295px;
+}
+
+.container .five.columns {
+    width: 370px;
+}
+
+.container .six.columns {
+    width: 445px;
+}
+
+.container .seven.columns {
+    width: 520px;
+}
+
+.container .eight.columns {
+    width: 595px;
+}
+
+.container .nine.columns {
+    width: 670px;
+}
+
+.container .ten.columns {
+    width: 735px;
+}
+
+.container .eleven.columns {
+    width: 820px;
+}
+
+.container .twelve.columns {
+    width: 895px;
+}
+
+.container .thirteen.columns {
+    width: 970px;
+}
+
+.container .fourteen.columns {
+    width: 1045px;
+}
+
+.container .fifteen.columns {
+    width: 1120px;
+}
+
+.container .sixteen.columns {
+    width: 1195px;
+}
+
+.container .one-third.column {
+    width: 395px;
+}
+
+.container .two-thirds.column {
+    width: 755px;
+}
+
+/* Offsets */
+
+.container .offset-by-one {
+    padding-left: 60px;
+}
+
+.container .offset-by-two {
+    padding-left: 120px;
+}
+
+.container .offset-by-three {
+    padding-left: 180px;
+}
+
+.container .offset-by-four {
+    padding-left: 240px;
+}
+
+.container .offset-by-five {
+    padding-left: 300px;
+}
+
+.container .offset-by-six {
+    padding-left: 360px;
+}
+
+.container .offset-by-seven {
+    padding-left: 420px;
+}
+
+.container .offset-by-eight {
+    padding-left: 480px;
+}
+
+.container .offset-by-nine {
+    padding-left: 540px;
+}
+
+.container .offset-by-ten {
+    padding-left: 600px;
+}
+
+.container .offset-by-eleven {
+    padding-left: 660px;
+}
+
+.container .offset-by-twelve {
+    padding-left: 720px;
+}
+
+.container .offset-by-thirteen {
+    padding-left: 780px;
+}
+
+.container .offset-by-fourteen {
+    padding-left: 840px;
+}
+
+.container .offset-by-fifteen {
+    padding-left: 900px;
+}
+
+/* divisions */
+
+.div-by-three {
+    width: 30%;
+}
+
+/*custom attribute*/
+
+.horizontal {
+    display: inline;
+    float: left;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.horizontal_x {
+    display: inline;
+    float: right;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.horizontal.alpha {
+    margin-left: 10px !important;
+    margin-right: 0px !important;
+}
+
+.horizontal.omega {
+    margin-left: 0px !important;
+    margin-right: 10px !important;
+}
+
+/* #Additional - Large Screens beyond 1280px
+================================================== */
+
+/* Note: Design for a width of 1280px */
+
+/* remove comment to enable 1280mpx width screen 
+@media only screen and (min-width: 1280px) {
+	.container                                  { width: 1280px; }
+	.container .column,
+	.container .columns                         { margin-left: 10px; margin-right: 10px;  }
+	.column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
+	.column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
+	.alpha.omega                                { margin-left: 0; margin-right: 0; }
+
+	.container .one.column,
+	.container .one.columns                     { width: 60px; }
+	.container .two.columns                     { width: 140px; }
+	.container .three.columns                   { width: 220px; }
+	.container .four.columns                    { width: 300px; }
+	.container .five.columns                    { width: 380px; }
+	.container .six.columns                     { width: 460px; }
+	.container .seven.columns                   { width: 540px; }
+	.container .eight.columns                   { width: 620px; }
+	.container .nine.columns                    { width: 700px; }
+	.container .ten.columns                     { width: 780px; }
+	.container .eleven.columns                  { width: 860px; }
+	.container .twelve.columns                  { width: 940px; }
+	.container .thirteen.columns                { width: 1020px; }
+	.container .fourteen.columns                { width: 1100px; }
+	.container .fifteen.columns                 { width: 1180px; }
+	.container .sixteen.columns                 { width: 1260px; }
+
+	.container .one-third.column                { width: 406px; }
+	.container .two-thirds.column               { width: 822px; }
+
+
+	
+	.container .offset-by-one                   { padding-left: 80px; }
+	.container .offset-by-two                   { padding-left: 160px; }
+	.container .offset-by-three                 { padding-left: 240px; }
+	.container .offset-by-four                  { padding-left: 320px; }
+	.container .offset-by-five                  { padding-left: 400px; }
+	.container .offset-by-six                   { padding-left: 480px; }
+	.container .offset-by-seven                 { padding-left: 560px; }
+	.container .offset-by-eight                 { padding-left: 640px; }
+	.container .offset-by-nine                  { padding-left: 720px; }
+	.container .offset-by-ten                   { padding-left: 800px; }
+	.container .offset-by-eleven                { padding-left: 880px; }
+	.container .offset-by-twelve                { padding-left: 960px; }
+	.container .offset-by-thirteen              { padding-left: 1040px; }
+	.container .offset-by-fourteen              { padding-left: 1120px; }
+	.container .offset-by-fifteen               { padding-left: 1200px; }
+}
+*/
+
+/* #Tablet (Portrait) */
+
+/* Note: Design for a width of 768px */
+
+@media only screen and (min-width:768px) and (max-width:959px) {
+    .container,
+    .content,
+    .container.wrap {
+        width: 768px;
+    }
+    .container .column,
+    .container .columns {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .column.alpha,
+    .columns.alpha {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .column.omega,
+    .columns.omega {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+    .alpha.omega {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .container .one.column,
+    .container .one.columns {
+        width: 28px;
+    }
+    .container .two.columns {
+        width: 76px;
+    }
+    .container .three.columns {
+        width: 124px;
+    }
+    .container .four.columns {
+        width: 172px;
+    }
+    .container .five.columns {
+        width: 220px;
+    }
+    .container .six.columns {
+        width: 268px;
+    }
+    .container .seven.columns {
+        width: 316px;
+    }
+    .container .eight.columns {
+        width: 364px;
+    }
+    .container .nine.columns {
+        width: 412px;
+    }
+    .container .ten.columns {
+        width: 460px;
+    }
+    .container .eleven.columns {
+        width: 508px;
+    }
+    .container .twelve.columns {
+        width: 556px;
+    }
+    .container .thirteen.columns {
+        width: 604px;
+    }
+    .container .fourteen.columns {
+        width: 652px;
+    }
+    .container .fifteen.columns {
+        width: 700px;
+    }
+    .container .sixteen.columns {
+        width: 748px;
+    }
+    .container .one-third.column {
+        width: 236px;
+    }
+    .container .two-thirds.column {
+        width: 492px;
+    }
+    /* Offsets */
+    .container .offset-by-one {
+        padding-left: 48px;
+    }
+    .container .offset-by-two {
+        padding-left: 96px;
+    }
+    .container .offset-by-three {
+        padding-left: 144px;
+    }
+    .container .offset-by-four {
+        padding-left: 192px;
+    }
+    .container .offset-by-five {
+        padding-left: 240px;
+    }
+    .container .offset-by-six {
+        padding-left: 288px;
+    }
+    .container .offset-by-seven {
+        padding-left: 336px;
+    }
+    .container .offset-by-eight {
+        padding-left: 384px;
+    }
+    .container .offset-by-nine {
+        padding-left: 432px;
+    }
+    .container .offset-by-ten {
+        padding-left: 480px;
+    }
+    .container .offset-by-eleven {
+        padding-left: 528px;
+    }
+    .container .offset-by-twelve {
+        padding-left: 576px;
+    }
+    .container .offset-by-thirteen {
+        padding-left: 624px;
+    }
+    .container .offset-by-fourteen {
+        padding-left: 672px;
+    }
+    .container .offset-by-fifteen {
+        padding-left: 720px;
+    }
+}
+
+/*--------*/
+
+@media only screen and (max-width:500px) {
+    .div-by-three {
+        width: 98%;
+    }
+    .modal img {
+        width: 50%;
+    }
+}
+
+/*  #Mobile (Portrait)
+================================================== */
+
+/* Note: Design for a width of 320px */
+
+@media only screen and (max-width:767px) {
+    #wrapper header.base {
+        margin-top: 0 !important;
+    }
+    .logged-in.admin-bar #wrapper header.base {
+        margin-top: 46px !important;
+    }
+    .container,
+    .container.wrap {
+        width: 300px;
+    }
+    .container .columns,
+    .container .column {
+        margin: 0;
+    }
+    .container .one.column,
+    .container .one.columns,
+    .container .two.columns,
+    .container .three.columns,
+    .container .four.columns,
+    .container .five.columns,
+    .container .six.columns,
+    .container .seven.columns,
+    .container .eight.columns,
+    .container .nine.columns,
+    .container .ten.columns,
+    .container .eleven.columns,
+    .container .twelve.columns,
+    .container .thirteen.columns,
+    .container .fourteen.columns,
+    .container .fifteen.columns,
+    .container .sixteen.columns,
+    .container .one-third.column,
+    .container .two-thirds.column {
+        width: 300px;
+    }
+    /* Offsets */
+    .container .offset-by-one,
+    .container .offset-by-two,
+    .container .offset-by-three,
+    .container .offset-by-four,
+    .container .offset-by-five,
+    .container .offset-by-six,
+    .container .offset-by-seven,
+    .container .offset-by-eight,
+    .container .offset-by-nine,
+    .container .offset-by-ten,
+    .container .offset-by-eleven,
+    .container .offset-by-twelve,
+    .container .offset-by-thirteen,
+    .container .offset-by-fourteen,
+    .container .offset-by-fifteen {
+        padding-left: 0;
+    }
+}
+
+/* #Mobile (Landscape)
+================================================== */
+
+/* Note: Design for a width of 480px */
+
+@media only screen and (min-width:480px) and (max-width:767px) {
+    .row .six.columns {
+        width: 80%;
+    }
+    .container,
+    .content,
+    .container.wrap {
+        width: 420px;
+    }
+    .container .columns,
+    .container .column {
+        margin: 0;
+    }
+    .container .one.column,
+    .container .one.columns,
+    .container .two.columns,
+    .container .three.columns,
+    .container .four.columns,
+    .container .five.columns,
+    .container .six.columns,
+    .container .seven.columns,
+    .container .eight.columns,
+    .container .nine.columns,
+    .container .ten.columns,
+    .container .eleven.columns,
+    .container .twelve.columns,
+    .container .thirteen.columns,
+    .container .fourteen.columns,
+    .container .fifteen.columns,
+    .container .sixteen.columns,
+    .container .one-third.column,
+    .container .two-thirds.column {
+        width: 420px;
+    }
+}
+
+@media only screen and (min-width:280px) and (max-width:479px) {
+    .row .six.columns {
+        width: 90%;
+    }
+    .container,
+    .content,
+    .container.wrap {
+        width: 300px;
+    }
+    .container .columns,
+    .container .column {
+        margin: 0;
+    }
+    .container .one.column,
+    .container .one.columns,
+    .container .two.columns,
+    .container .three.columns,
+    .container .four.columns,
+    .container .five.columns,
+    .container .six.columns,
+    .container .seven.columns,
+    .container .eight.columns,
+    .container .nine.columns,
+    .container .ten.columns,
+    .container .eleven.columns,
+    .container .twelve.columns,
+    .container .thirteen.columns,
+    .container .fourteen.columns,
+    .container .fifteen.columns,
+    .container .sixteen.columns,
+    .container .one-third.column,
+    .container .two-thirds.column {
+        width: 300px;
+    }
+}
+
+/* #Clearing
+================================================== */
+
+/* Self Clearing Goodness */
+
+.container:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+
+.row {
+    margin-bottom: 20px !important;
+}
+
+/*.clearfix:before, .clearfix:after, .row:before, .row:after, .row, .panel-heading {
+	display: inline-table;
+}
+*/
+
+.clearfix:before,
+.clearfix:after,
+.panel-heading {
+    display: inline-table;
+}
+
+.row:after,
+.clearfix:after {
+    clear: both;
+}
+
+.row,
+.clearfix {
+    zoom: 1;
+}
+
+/* You can also use a <br class="clear" /> to clear columns */
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    width: auto !important;
+}
+
+/*------------------------------------
+  dashboard components class
+------------------------------------*/
+
+.btn {
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.btn:hover {
+    text-decoration: none;
+}
+
+.btn.blue {
+    text-shadow: 0 1px 0 #0e71b5;
+    background-color: #3598dc;
+    border: none;
+    color: #FFF;
+    border-bottom: 3px solid #0e71b5;
+}
+
+.btn.blue:hover {
+    background-color: #1182cf;
+    border-bottom: none;
+    padding-bottom: 8px;
+    box-shadow: 0px 2px 4px rgba(2, 2, 1, 0.40);
+}
+
+.btn.blue.hollow {
+    text-shadow: none;
+    background: none;
+    border: 1px solid #1182cf;
+    color: #1182cf;
+}
+
+.btn.blue.hollow:hover {
+    background: #1182cf;
+    border: 1px solid #1182cf;
+    color: #FFF;
+}
+
+/*------------------------------------
+   dashboard default design classes
+------------------------------------*/
+
+.gama {
+    margin: 0 15px;
+}
+
+.panel {
+    /*default panel  [ more colour : green blue red orange lime]*/
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    border: 1px solid #c2c2c2;
+}
+
+.panel.bg-liteblue {
+    border-color: #B7EDFF;
+    color: #B7EDFF;
+}
+
+.panel.bg-blue {
+    border-color: #337ab7;
+    color: #337ab7;
+}
+
+.panel.bg-green {
+    border-color: #5cb85c;
+    color: #5cb85c;
+}
+
+.panel.bg-yellow {
+    border-color: #f0ad4e;
+    color: #f0ad4e;
+}
+
+.panel.bg-red {
+    border-color: #d9534f;
+    color: #d9534f;
+}
+
+.panel.bg-liteblue a {
+    color: #B7EDFF;
+}
+
+.panel.bg-blue a {
+    color: #337ab7;
+}
+
+.panel.bg-green a {
+    color: #5cb85c;
+}
+
+.panel.bg-yellow a {
+    color: #f0ad4e;
+}
+
+.panel.bg-red a {
+    color: #d9534f;
+}
+
+.panel.bg-liteblue a:hover {
+    color: #7fb5c7;
+}
+
+.panel.bg-blue a:hover {
+    color: #084f8c;
+}
+
+.panel.bg-green a:hover {
+    color: #268226;
+}
+
+.panel.bg-yellow a:hover {
+    color: #b26f10;
+}
+
+.panel.bg-red a:hover {
+    color: #99130f;
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.panel-title {
+    padding: 8px 0;
+    border-bottom: 1px solid #c2c2c2;
+}
+
+.panel-body {
+    padding: 8px;
+}
+
+.panel-footer {
+    background-color: #f5f5f5;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top: 1px solid #ddd;
+    overflow: hidden;
+    padding: 8px 15px;
+}
+
+.panel-title .icon-left {
+    float: left;
+    padding: 2px 10px;
+}
+
+.pad-50 {
+    padding: 50px 50px 50px;
+}
+
+.mar-50 {
+    padding: 58px 50px 90px;
+}
+
+.hide-m-p,
+.hide-margin-padding,
+.hide-mp,
+.hide-pm {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block;
+}
