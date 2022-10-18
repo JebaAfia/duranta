@@ -34,12 +34,9 @@ $result = $conn->query($sql);
       $html.='</td>';
       $html.='</tr>';
       $html.='</table>';
-
-
-  }   
+    }   
     echo $html;
-  } 
-  else {
+  } else {
     echo "0 results";
   }
   $conn->close();
