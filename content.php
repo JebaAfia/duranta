@@ -2,6 +2,7 @@
 
 <div id="about" class="about-text">
    <div class="row">
+   <div class="columns fourteen center bikes">
 <?php
 
 $sql = "SELECT id, image, bike_name FROM bikes";
@@ -13,9 +14,9 @@ $result = $conn->query($sql);
 
    if ($result->num_rows > 0) {
    // output data of each row
-      $html = '';
+   $html = '';
    while($row = $result->fetch_assoc()) {
-   $html.='<div class="columns fourteen center bikes">';
+
    $html.='<ul>';
    $html.='<li class="bike_box">';
    $html.='<a  href="specification.php?product_id=804091">';
@@ -26,7 +27,7 @@ $result = $conn->query($sql);
    $html.='</a>';
    $html.='</li>';
    $html.='</ul>';
-   $html.='</div>';
+
           
       
    }   
@@ -38,7 +39,7 @@ $result = $conn->query($sql);
 $conn->close();
 ?>
 
-
+      </div>
    </div>
 </div>
 
