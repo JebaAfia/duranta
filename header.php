@@ -3,7 +3,6 @@
 	include 'includes/functions.php'
 ?>
 <head>
-
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -55,7 +54,6 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://www.jacklmoore.com/colorbox/jquery.colorbox.js"></script>
-
 </head>
 
 

@@ -5,10 +5,8 @@
 	include 'header.php';
 ?>
 <body>
-
-<div id="wrapper">
+	<div id="wrapper">
   	<?php include 'navbar.php';?>
-
 		<div class="full_screen_slider header" style="background:url('media/bg1.jpg');" id="wellcome">
 			<div class="heading">
 				<div class="center">
@@ -19,7 +17,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div id="about" class="about"  style="background:url('media/b1.jpg');">
 			<div class="big_gear">
 			<div class="anim">
@@ -45,10 +42,8 @@
 				<li><a href="contact.php">CONTACT</a></li>
 			</ul>
 		</div>
-
 	<div id="category" class="category">
 		<div class="row hide-pm ">
-
 			<ul class="blur ashh">
 				<li class="half fl"><a href="display.php?cat=junior_bike"><img src="media/cat1.jpg" alt=""><span class="tl">JUNIOR<br>BIKES</span></a></li>
 				<li class="half fl"><a href="display.php?cat=mtb_dual_suspension_bike"><img src="media/cat2.jpg" alt=""><span class="bl">MTB DUAL<br>SUSPENSION BIKES</span></a></li>
@@ -63,13 +58,9 @@
 				<li class="half fl"><a href="display.php?cat=e_bike"><img src="media/cat10.jpg" alt=""><span class="br">E BIKES</span></a></li>
 				<li class="half fl"><a href="display.php?cat=scooty"><img src="media/cat12.jpg" alt=""><span class="br">SCOOTY</span></a></li>
 			</ul>
-
 		</div>
 	</div>	
 	</div>
-				
-
 <?php include 'footer.php';?>
-
 </body>
 </html>
