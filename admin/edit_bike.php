@@ -53,7 +53,7 @@ if ( isset($_POST['submit'])){
           <label for="exampleFormControlFile1">Bike Category</label>
           
           <select name="bike_category">
-          <?php
+            <?php
               $sql = "SELECT * FROM category;";
               $categories = $conn->query($sql);
               while($category = $categories->fetch_assoc()) {

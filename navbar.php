@@ -20,36 +20,19 @@
 				<ul>
 					<li>
 						<a href="index.php#category">BIKES</a>
-						<ul name="bike_category">
+						<ul>
 						<?php
 							$sql = "SELECT * FROM category;";
 							$categories = $conn->query($sql);
 							while($category = $categories->fetch_assoc()) {
 								$cat_id = $category['id'];
 								$selected = '';
-								if($cat_id == $result['bike_category']){
+								if($cat_id == $category['id']){
 								$selected = 'selected';
 								}
-								// echo '<option '.$selected.' value="'.$cat_id.'">'.$category['categories'].'</option>';
-								echo '<li>'.'<a href="pages.php" '.$selected.' value="'.$cat_id.'">'.$category['categories'].'</a>'.'</li>';
+								echo '<li><a href="'.url('pages.php?id='.$cat_id).'">'.$category['categories'].'</a></li>';
 							}
 						?>
-
-							<!-- <li><a href="pages.php">JUNIOR BIKES</a></li>
-							<li><a href="display.php?cat=mtb_dual_suspension_bike">MTB DUAL SUSPENSION BIKES</a></li>
-							<li><a href="display.php?cat=kids_bike">KIDS BIKES</a></li>
-							<li><a href="display.php?cat=racing_bike">ROAD/RACING BIKES</a></li>
-							<li><a href="display.php?cat=mtb_bike">MTB BIKES</a></li>
-							<li><a href="display.php?cat=classic_bike">CLASSIC BIKES</a></li>
-							<li><a href="display.php?cat=fat_bike">FAT BIKES</a></li>
-							<li><a href="display.php?cat=bmx_bike">BMX BIKES</a></li>
-							<li><a href="display.php?cat=folding_bike">FOLDING BIKES</a></li>
-							<li><a href="display.php?cat=e_bike">E BIKES</a></li>
-							<li><a href="display.php?cat=latest">LATEST BIKES</a></li>
-							<li><a href="display.php?cat=upcoming">UPCOMMING BIKES</a></li>
-							<li><a href="display.php?cat=scooty">SCOOTY</a></li>
-							<li><a href="display.php?cat=available">Available</a></li>
-							<li><a href="display.php?cat=tri_cycle">Tri Cycle</a></li> -->
 						</ul>
 					</li>
 					<li>

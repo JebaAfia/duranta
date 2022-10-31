@@ -2,7 +2,7 @@
    <div class="row">
       <div class="columns fourteen center bikes">
 <?php
-   $sql = "SELECT id, image, bike_name FROM bikes";
+   $sql = "SELECT id, image, bike_name FROM bikes WHERE bike_category=".$_GET['id'];
    $result = $conn->query($sql);
 
    if( isset($_GET['deleted'])){

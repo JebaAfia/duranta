@@ -20,12 +20,14 @@ $result = $conn->query($sql);
     $html.='<tr>';
     $html.='<th>Product ID</th>';
     $html.='<th>Product Category</th>';
+    $html.='<th>Action</th>';
     $html.='</tr>';
     
     while($row = $result->fetch_assoc()) {
       $html.='<tr>';
       $html.='<td>'.$row['id'].'</td>';
       $html.='<td>'.$row['categories'].'</td>';
+      $html.='<td><a href="'. url('admin/insert_bike_categories.php?edit='.$row['id']) .'">EDIT</a></td>';
       $html.='</tr>';
       
     }   

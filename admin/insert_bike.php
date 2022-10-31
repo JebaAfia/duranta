@@ -17,10 +17,14 @@ include '../header.php';
         <div class="form-group">
           <label for="exampleFormControlFile1">Bike Category</label>
           <select name="bike_category" id="cars">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
+            <?php
+              $sql = "SELECT * FROM category;";
+              $categories = $conn->query($sql);
+              while($category = $categories->fetch_assoc()) {
+                $cat_id = $category['id'];
+                echo '<option value="'.$cat_id.'">'.$category['categories'].'</option>';
+              }
+            ?>
           </select>
         </div>
         <div class="form-group">
