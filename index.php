@@ -45,18 +45,26 @@
 	<div id="category" class="category">
 		<div class="row hide-pm ">
 			<ul class="blur ashh">
-				<li class="half fl"><a href="display.php?cat=junior_bike"><img src="media/cat1.jpg" alt=""><span class="tl">JUNIOR<br>BIKES</span></a></li>
-				<li class="half fl"><a href="display.php?cat=mtb_dual_suspension_bike"><img src="media/cat2.jpg" alt=""><span class="bl">MTB DUAL<br>SUSPENSION BIKES</span></a></li>
-				<li class="half fl"><a href="display.php?cat=kids_bike"><img src="media/cat3.jpg" alt=""><span class="tr">KIDS<br>BIKES</span></a></li>
-				<li class="half fl"><a href="display.php?cat=racing_bike"><img src="media/cat4.jpg" alt=""><span class="br">ROAD/RACING<br>BIKES</span></a></li>
-				<li class="half fl"><a href="display.php?cat=mtb_bike"><img src="media/cat5.jpg" alt=""><span class="tl">MTB<br>BIKES</span></a></li>
-				<li class="half fl"><a href="display.php?cat=classic_bike"><img src="media/cat6.jpg" alt=""><span class="tl">CLASSIC<br>BIKES</span></a></li>
+				<?php
+					$sql = "SELECT id, image, categories FROM category";
+					$result = $conn->query($sql);
 
-				<li class="half fl"><a href="display.php?cat=fat_bike"><img src="media/cat7.jpg" alt=""><span class="tr">FAT<br>BIKES</span></a></li>
-				<li class="half fl"><a href="display.php?cat=bmx_bike"><img src="media/cat8.jpg" alt=""><span class="br">BMX<br>BIKES</span></a></li>
-				<li class="half fl"><a href="display.php?cat=folding_bike"><img src="media/cat9.jpg" alt=""><span class="tl">FOLDING<br>BIKES</span></a></li>
-				<li class="half fl"><a href="display.php?cat=e_bike"><img src="media/cat10.jpg" alt=""><span class="br">E BIKES</span></a></li>
-				<li class="half fl"><a href="display.php?cat=scooty"><img src="media/cat12.jpg" alt=""><span class="br">SCOOTY</span></a></li>
+					if ($result->num_rows > 0) {
+					$html = '';
+					while($row = $result->fetch_assoc()) {
+						$html.='<li class="half fl">';
+						$html.='<a href="'.url('pages.php?id='.$row['id']).'">';
+						$html.='<img src="media/front-image/'.$row['image'].'" alt="image is failed to show">';
+						$html.='<span class="tl">'.$row['categories'].'</span>';
+						$html.='</a>';
+						$html.='</li>';
+					}   
+					echo $html;
+					} else {
+					echo "0 results";
+					}
+					$conn->close();
+				?>
 			</ul>
 		</div>
 	</div>	

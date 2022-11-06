@@ -17,8 +17,16 @@ include '../header.php';
     <div class="container">
       <form action="" method="POST" enctype="multipart/form-data">
         <div class="form-group">
+          <label for="exampleFormControlFile1">Upload image</label>
+          <input name="uploadfile" type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+        <div class="form-group">
           <label for="exampleFormControlFile1">Bike Category</label>
           <input type="text" value="<?php echo $cat_name;?>" name="categories" class="form-control" id="exampleFormControlFile1">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Category Details</label>
+          <textarea name="cat_details" class="form-control" id="" cols="30" rows="10"></textarea>
         </div>
         <div class="form-group">
           <button type="submit" name="submit" class="btn btn-primary">SUBMIT</button>
@@ -30,13 +38,15 @@ include '../header.php';
 
 <?php
   if ( isset($_POST['submit'])){
-
+    $filename = rand() . $_FILES["uploadfile"]["name"];
+    $tempname = $_FILES["uploadfile"]["tmp_name"];
+    $folder = "../media/front-image/" . $filename;
     $bike_categories = $_POST['categories'];
+    $cat_details = $_POST['cat_details'];
 
     if(isset($_GET['edit'])){
       // update
-      // $sql = "UPDATE bikes SET image='$filename', bike_name='$bike_name', bike_category='$bike_category', bike_details='$bike_details' WHERE id=".$_GET['post_id'];
-      $sql = "UPDATE category SET categories = '$bike_categories' WHERE id=".$_GET['edit'];
+      $sql = "UPDATE category SET categories = '$bike_categories', cat_details = '$cat_details', image='$filename' WHERE id=".$_GET['edit'];
       if ($conn->query($sql)) {
         echo "New record updated successfully";
       } else {
@@ -51,7 +61,14 @@ include '../header.php';
         echo "Category already exists";
       }else{
         
-        $sql = "INSERT INTO category (`categories`) VALUES ('$bike_categories')";
+        $sql = "INSERT INTO category (`categories`,`image`,`cat_details`) VALUES ('$bike_categories','$filename','$cat_details')";
+
+        if(move_uploaded_file($tempname , $folder)){
+          echo "<h3>  Image uploaded successfully!</h3>";
+        } else {
+          echo "<h3>  Failed to upload image!</h3>";
+        }
+
         if ($conn->query($sql)) {
           echo "New record created successfully";
         } else {

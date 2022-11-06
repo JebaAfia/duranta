@@ -40,29 +40,28 @@ include '../header.php';
 </main>
 
 <?php
+  if ( isset($_POST['submit'])){
+    $filename = rand() . $_FILES["uploadfile"]["name"];
+    $tempname = $_FILES["uploadfile"]["tmp_name"];
+    $folder = "../media/bikes/" . $filename;
+    $bike_name = $_POST['bike_name'];
+    $bike_category = $_POST['bike_category'];
+    $bike_details = $_POST['bike_details'];
+    $sql = "INSERT INTO bikes (`image`, `bike_name`, `bike_category`, `bike_details`) VALUES ('$filename', '$bike_name', '$bike_category', '$bike_details')";
 
-if ( isset($_POST['submit'])){
-  $filename = rand() . $_FILES["uploadfile"]["name"];
-  $tempname = $_FILES["uploadfile"]["tmp_name"];
-  $folder = "../media/bikes/" . $filename;
-  $bike_name = $_POST['bike_name'];
-  $bike_category = $_POST['bike_category'];
-  $bike_details = $_POST['bike_details'];
-$sql = "INSERT INTO bikes (`image`, `bike_name`, `bike_category`, `bike_details`) VALUES ('$filename', '$bike_name', '$bike_category', '$bike_details')";
+    if(move_uploaded_file($tempname , $folder)){
+      echo "<h3>  Image uploaded successfully!</h3>";
+    } else {
+      echo "<h3>  Failed to upload image!</h3>";
+    }
 
-if(move_uploaded_file($tempname , $folder)){
-  echo "<h3>  Image uploaded successfully!</h3>";
-} else {
-  echo "<h3>  Failed to upload image!</h3>";
-}
-
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
-$conn->close();
-}
+    if ($conn->query($sql) === TRUE) {
+      echo "New record created successfully";
+    } else {
+      echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+    $conn->close();
+  }
 ?>
 
 

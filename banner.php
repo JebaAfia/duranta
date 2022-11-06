@@ -1,8 +1,20 @@
-<div class="page_caption">
-    <h2>JUNIOR BIKES</h2>
-    <p>Remember the freedom, fun, and sense of accomplishment that your first bike gave you? Well, these days, kids can get rolling at an even earlier age with toddler-friendly walk bikes and coaster-brake-equipped 20-inch models that are ideal for neighborhood adventures. Even better, the fun of our kids bikes is equally matched with the quality and value that parents appreciate</p>
-</div>
+<?php
+    $sql = "SELECT id, image, categories, cat_details FROM category WHERE id=".$_GET['id'];
+    $result = $conn->query($sql);
 
-<div class="full_screen_slider screen_height header" style="background:url('media/juniorbike.jpg');" id="wellcome">
-    <div class="hide_m heading "><a href="#about"><span class="center bg_down_arr"></span></a></div>
-</div>
+    if ($result->num_rows > 0) {
+        $html = '';
+        while($row = $result->fetch_assoc()) {
+            $html.='<div class="page_caption">';
+            $html.='<h2>'.$row['categories'].'</h2>';
+            $html.='<p>'.$row['cat_details'].'</p>';
+            $html.='</div>';
+            $html.='<div class="full_screen_slider screen_height header" style="background:url(media/front-image/'.$row['image'].');" id="wellcome">';
+            $html.='<div class="hide_m heading "><a href="#about"><span class="center bg_down_arr"></span></a></div>';
+            $html.='</div>';
+        }   
+        echo $html;
+    } else {
+        echo "0 results";
+    }
+?>
