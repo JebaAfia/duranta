@@ -13,7 +13,7 @@ $sql = "DELETE FROM category WHERE id=".$_GET['deleted'];
         if (file_exists('../media/front-image/'.$row['image'])) {
         unlink('../media/front-image/'.$row['image']);
         } 
-        header("Location: http://localhost/duranta/admin/bike_categories.php?deleted=true");
+        header("Location: http://localhost/duranta/admin/product_categories.php?deleted=true");
 
     } else {
     echo "Error deleting record: " . $conn->error;

@@ -11,19 +11,19 @@
             <li>
                 <a href="#">CATEGORY</a>
                 <ul>
-                    <li><a href="bike_categories.php">ALL CATEGORIES</a></li>
-                    <li><a href="insert_bike_categories.php">INSERT CATEGORY</a></li>
+                    <li><a href="product_categories.php">ALL CATEGORIES</a></li>
+                    <li><a href="insert_product_categories.php">INSERT CATEGORY</a></li>
                     <li><a href="delete_categories.php">DELETE CATEGORY</a></li>
                 </ul>
             </li>
 
             <li>
-                <a href="#">BIKE</a>
+                <a href="#">PRODUCT</a>
                 <ul>
-                    <li><a href="bike_page.php">ALL BIKES</a></li>
-                    <li><a href="insert_bike.php">INSERT BIKE</a></li>
-                    <li><a href="edit_bike.php">EDIT BIKE</a></li>
-                    <li><a href="delete_bike.php">DELETE BIKE</a></li>
+                    <li><a href="product_page.php">ALL PRODUCTS</a></li>
+                    <li><a href="insert_product.php">INSERT PRODUCT</a></li>
+                    <li><a href="edit_product.php">EDIT PRODUCT</a></li>
+                    <li><a href="delete_product.php">DELETE PRODUCT</a></li>
                 </ul>
             </li>
 		</ul>

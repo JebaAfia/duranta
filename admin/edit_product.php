@@ -9,18 +9,18 @@ echo "ERROR";
 return;
 }
 
-$sql = "SELECT * FROM bikes WHERE id=".$_GET['post_id'];
+$sql = "SELECT * FROM products WHERE id=".$_GET['post_id'];
 $result = $conn->query($sql)->fetch_assoc();
 
 if ( isset($_POST['submit'])){
   $filename = $result['image'];
   $tempname = $_FILES["uploadfile"]["tmp_name"];
-  $folder = "../media/bikes/" . $filename;
-  $bike_name = $_POST['bike_name'];
-  $bike_category = $_POST['bike_category'];
-  $bike_details = $_POST['bike_details'];
+  $folder = "../media/products/" . $filename;
+  $product_name = $_POST['product_name'];
+  $product_category = $_POST['product_category'];
+  $product_details = $_POST['product_details'];
 
-  $sql = "UPDATE bikes SET image='$filename', bike_name='$bike_name', bike_category='$bike_category', bike_details='$bike_details' WHERE id=".$_GET['post_id'];
+  $sql = "UPDATE products SET image='$filename', product_name='$product_name', product_category='$product_category', product_details='$product_details' WHERE id=".$_GET['post_id'];
 
   if(!empty($tempname)){
     if(move_uploaded_file($tempname , $folder)){
@@ -43,23 +43,23 @@ if ( isset($_POST['submit'])){
       <form action="" method="POST" enctype="multipart/form-data">
         <div class="form-group">
           <label for="exampleFormControlFile1">Upload image</label>
-          <input name="uploadfile" accept="image/*" type="file" class="form-control-file" id="exampleFormControlFile1"> <img src=" ../media/bikes/<?php echo $result['image']?>" alt="">
+          <input name="uploadfile" accept="image/*" type="file" class="form-control-file" id="exampleFormControlFile1"> <img src=" ../media/products/<?php echo $result['image']?>" alt="">
         </div>
         <div class="form-group">
           <label for="exampleFormControlFile1">Bike Name</label>
-          <input type="text" name="bike_name" class="form-control" id="exampleFormControlFile1" value="<?php echo $result['bike_name']?>">
+          <input type="text" name="product_name" class="form-control" id="exampleFormControlFile1" value="<?php echo $result['product_name']?>">
         </div>
         <div class="form-group">
           <label for="exampleFormControlFile1">Bike Category</label>
           
-          <select name="bike_category">
+          <select name="product_category">
             <?php
               $sql = "SELECT * FROM category;";
               $categories = $conn->query($sql);
               while($category = $categories->fetch_assoc()) {
                 $cat_id = $category['id'];
                 $selected = '';
-                if($cat_id == $result['bike_category']){
+                if($cat_id == $result['product_category']){
                   $selected = 'selected';
                 }
                 echo '<option '.$selected.' value="'.$cat_id.'">'.$category['categories'].'</option>';
@@ -69,7 +69,7 @@ if ( isset($_POST['submit'])){
         </div>
         <div class="form-group">
           <label for="exampleFormControlFile1">Bike Details</label>
-          <textarea name="bike_details" class="form-control" id="" cols="30" rows="10"><?php echo $result['bike_details']?></textarea>
+          <textarea name="product_details" class="form-control" id="" cols="30" rows="10"><?php echo $result['product_details']?></textarea>
         </div>
         <div class="form-group">
           <button type="submit" name="submit" class="btn btn-primary">SUBMIT</button>

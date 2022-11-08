@@ -11,14 +11,14 @@ include '../header.php';
           <input name="uploadfile" type="file" class="form-control-file" id="exampleFormControlFile1">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlFile1">Bike Name</label>
-          <input type="text" name="bike_name" class="form-control" id="exampleFormControlFile1">
+          <label for="exampleFormControlFile1">Product Name</label>
+          <input type="text" name="product_name" class="form-control" id="exampleFormControlFile1">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlFile1">Bike Category</label>
-          <select name="bike_category" id="cars">
+          <label for="exampleFormControlFile1">Product Category</label>
+          <select name="product_category" id="cars">
             <?php
-              $sql = "SELECT * FROM category;";
+              $sql = "SELECT * FROM category";
               $categories = $conn->query($sql);
               while($category = $categories->fetch_assoc()) {
                 $cat_id = $category['id'];
@@ -28,8 +28,8 @@ include '../header.php';
           </select>
         </div>
         <div class="form-group">
-          <label for="exampleFormControlFile1">Bike Details</label>
-          <textarea name="bike_details" class="form-control" id="" cols="30" rows="10"></textarea>
+          <label for="exampleFormControlFile1">Product Details</label>
+          <textarea name="product_details" class="form-control" id="" cols="30" rows="10"></textarea>
         </div>
         <div class="form-group">
           <button type="submit" name="submit" class="btn btn-primary">SUBMIT</button>
@@ -43,11 +43,12 @@ include '../header.php';
   if ( isset($_POST['submit'])){
     $filename = rand() . $_FILES["uploadfile"]["name"];
     $tempname = $_FILES["uploadfile"]["tmp_name"];
-    $folder = "../media/bikes/" . $filename;
-    $bike_name = $_POST['bike_name'];
-    $bike_category = $_POST['bike_category'];
-    $bike_details = $_POST['bike_details'];
-    $sql = "INSERT INTO bikes (`image`, `bike_name`, `bike_category`, `bike_details`) VALUES ('$filename', '$bike_name', '$bike_category', '$bike_details')";
+    $folder = "../media/products/" . $filename;
+    $product_name = $_POST['product_name'];
+    $product_category = $_POST['product_category'];
+    $product_details = $_POST['product_details'];
+    $sql = "INSERT INTO products (`image`, `product_name`, `product_category`, `product_details`) VALUES ('$filename', '$product_name', '$product_category', '$product_details')";
+
 
     if(move_uploaded_file($tempname , $folder)){
       echo "<h3>  Image uploaded successfully!</h3>";

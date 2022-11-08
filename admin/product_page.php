@@ -5,7 +5,7 @@
 <div class="container">
 <?php
     
-$sql = "SELECT id, image, bike_name FROM bikes";
+$sql = "SELECT id, image, product_name FROM products";
 $result = $conn->query($sql);
 
   if( isset($_GET['deleted'])){
@@ -27,12 +27,12 @@ $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
       $html.='<tr>';
       $html.='<td>';
-      $html.='<img src="../media/bikes/'.$row['image'].'" alt=""  width=150px>';
+      $html.='<img src="../media/products/'.$row['image'].'" alt=""  width=150px>';
       $html.='</td>';
-      $html.='<td>'.$row['bike_name'].'</td>';
+      $html.='<td>'.$row['product_name'].'</td>';
       $html.='<td>';
-      $html.='<a type="button" class="table_button" href="/duranta/admin/edit_bike.php?post_id='.$row['id'].'">EDIT</a>';
-      $html.='<a type="button" class="table_button" href="/duranta/admin/delete_bike.php?post_id='.$row['id'].'">DELETE</a>';
+      $html.='<a type="button" class="table_button" href="/duranta/admin/edit_product.php?post_id='.$row['id'].'">EDIT</a>';
+      $html.='<a type="button" class="table_button" href="/duranta/admin/delete_product.php?post_id='.$row['id'].'">DELETE</a>';
       $html.='</td>';
       $html.='</tr>';
       
