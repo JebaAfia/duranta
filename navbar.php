@@ -1,6 +1,3 @@
-<?php 
-	include 'includes/connection.php';
-?>
 <div class="nav">
 	<div class="logo">
 		<a href="/duranta"><img src="media/logo.png" alt="duranta byke logo"></a>

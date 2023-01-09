@@ -1,5 +1,7 @@
 <?php 
 include '../header.php';
+check_login(); 
+include 'navbar_admin.php';
 ?>
 
 <?php
@@ -38,7 +40,7 @@ if ( isset($_POST['submit'])){
 }
 ?>
 <main role="main">
-  <div class="album py-5 bg-light">
+  <div class="album py-5 bg-light admin">
     <div class="container">
       <form action="" method="POST" enctype="multipart/form-data">
         <div class="form-group">

@@ -991,3 +991,9 @@ table {
     padding: 3px;
     color: #5d1407;
 }
+.errors{
+    color: red;
+  }
+.admin .container {
+    padding-top: 100px;
+}

@@ -1,6 +1,6 @@
 <?php 
 	include 'includes/connection.php';
-	include 'includes/functions.php'
+	include 'includes/functions.php';
 ?>
 <head>
 	<meta charset="UTF-8">
@@ -22,6 +22,7 @@
 	<link rel='stylesheet' id='font-css'  href='<?= url('lib/css/framework.css');?>' type='text/css' media='all' />
 	<link rel='stylesheet' id='font-css'  href='<?= url('style.css'); ?>' type='text/css' media='all' />
 	<link rel='stylesheet' id='font-css'  href='<?= url('lib/css/responcive.css');?>' type='text/css' media='all' />
+
 	
 	<style type="text/css">
 		.place-order {
